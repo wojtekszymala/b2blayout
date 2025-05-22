@@ -1,0 +1,18 @@
+@use './../functions/unit-converter' as uc;
+
+.zamel-container {
+    --zamel-container-wmax: #{uc.pxToRem(1392)};
+    --zamel-container-px: #{uc.pxToRem(16)};
+
+    margin-inline: auto;
+    max-inline-size: var(--zamel-container-wmax);
+    padding-inline: var(--zamel-container-px);
+}
+
+.zamel-container-x {
+    container-type: inline-size;
+}
+
+.zamel-container-y {
+    container-type: block-size;
+}

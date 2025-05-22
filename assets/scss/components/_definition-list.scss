@@ -1,0 +1,41 @@
+.zamel-definiton-list {
+    display: grid;
+    gap: 1.5em;
+}
+
+.zamel-definiton-item {
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-definiton-checkbox {
+    display: none;
+}
+
+.zamel-definition-label {
+    cursor: pointer;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    padding: 1em;
+
+    &::after {
+        background: url('./../img/icon/chevron.svg') no-repeat center / contain;
+        content: '';
+        display: block;
+        flex-shrink: 0;
+        inline-size: 1em;
+    }
+}
+
+.zamel-definition-description {
+    margin: 0;
+    padding: 1em;
+
+    & > a {
+        font-weight: var(--zamel-fw-bold);
+    }
+
+    .zamel-definiton-checkbox:not(:checked) ~ & {
+        display: none;
+    }
+}

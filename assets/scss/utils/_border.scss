@@ -1,0 +1,57 @@
+@use './../functions/unit-converter' as uc;
+
+/* Border */
+
+.zamel-b-0 {
+    border: 0;
+}
+
+.zamel-b {
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+/* Border Top */
+
+.zamel-bt-0 {
+    border-top: 0;
+}
+
+.zamel-bt {
+    border-top: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-btc--light-grey {
+    border-top-color: var(--zamel-c-light-grey);
+}
+
+/* Border Bottom */
+
+.zamel-bb {
+    border-bottom: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-bb--only {
+    border-width: 0 0 max(0.0625em, 1px);
+}
+
+.zamel-bbc--primary {
+    border-bottom-color: var(--zamel-c-primary);
+}
+
+.zamel-bbw--0_1875 {
+    border-bottom-width: 0.1875rem;
+}
+
+/* Border Left */
+
+.zamel-bl {
+    border-left: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-blw--0_125rem {
+    border-left-width: max(0.125rem, 1px);
+}
+
+.zamel-blc--primary {
+    border-left-color: var(--zamel-c-primary);
+}

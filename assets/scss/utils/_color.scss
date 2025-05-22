@@ -1,0 +1,15 @@
+/* Colors */
+
+@each $key, $value in $colors {
+    .zamel-c-#{$key} {
+        color: var(--zamel-c-#{$key});
+    }
+}
+
+/* Background Colors */
+
+@each $key, $value in $colors {
+    .zamel-bgc-#{$key} {
+        background-color: var(--zamel-c-#{$key});
+    }
+}

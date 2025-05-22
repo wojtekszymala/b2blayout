@@ -1,0 +1,47 @@
+@use 'sass:map';
+
+.zamel-hidden {
+    display: none !important;
+}
+
+.zamel-desktop-only {
+
+    @media (width < map.get($media-devices-wmax, 'tablet')) {
+        display: none !important;
+    }
+}
+
+.zamel-desktop-hidden {
+    
+    @media (width >= map.get($media-devices-wmax, 'tablet')) {
+        display: none !important;
+    }
+}
+
+.zamel-tablet-only {
+
+    @media (width < map.get($media-devices-wmax, 'mobile')) or (width >= map.get($media-devices-wmax, 'tablet')) {
+        display: none !important;
+    }
+}
+
+.zamel-tablet-hidden {
+    
+    @media (width >= map.get($media-devices-wmax, 'mobile')) and (width < map.get($media-devices-wmax, 'tablet')) {
+        display: none !important;
+    }
+}
+
+.zamel-mobile-only {
+
+    @media (width >= map.get($media-devices-wmax, 'mobile')) {
+        display: none !important;
+    }
+}
+
+.zamel-mobile-hidden {
+    
+    @media (width < map.get($media-devices-wmax, 'mobile')) {
+        display: none !important;
+    }
+}

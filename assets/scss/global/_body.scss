@@ -1,0 +1,16 @@
+body {
+    --zamel-body-bgc: var(--zamel-c-white);
+    --zamel-body-fc: var(--zamel-c-black);
+    --zamel-body-ff: var(--zamel-ff-base);
+    --zamel-body-fs: var(--zamel-fs-base);
+    --zamel-body-lh: var(--zamel-lh-base);
+
+    background-color: var(--zamel-body-bgc);
+    color: var(--zamel-body-fc);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--zamel-body-ff);
+    font-size: var(--zamel-body-fs);
+    line-height: var(--zamel-body-lh);
+    min-block-size: 100dvh;
+}

@@ -1,0 +1,55 @@
+.zamel-dynamic-content {
+
+    & h4 {
+        font-size: var(--zamel-fs-base);
+        font-weight: var(--zamel-fw-bold);
+        margin-block-start: 2em;
+    }
+
+    & p {
+        font-size: var(--zamel-fs-base);
+        margin-block: 1em;
+    }
+
+    & a {
+        font-weight: var(--zamel-fw-bold);
+    }
+
+    & ul {
+        all: revert;
+    }
+}
+
+.zamel-dynamic-product-content {
+ 
+    & h4 {
+        font-size: var(--zamel-fs-base);
+        font-weight: var(--zamel-fw-bold);
+        margin-block-start: 2em;
+    }
+
+    & p {
+        font-size: var(--zamel-fs-base);
+        margin-block: 1em;
+    }
+
+    & a {
+        font-weight: var(--zamel-fw-bold);
+    }
+
+    & ul {
+        all: revert;
+
+        & > li {
+
+            &:nth-child(odd) {
+                background-color: var(--zamel-c-light-grey);
+            }
+        }
+    }
+
+    & img {
+        inline-size: 32em;
+        margin-block: 2em;
+    }
+}

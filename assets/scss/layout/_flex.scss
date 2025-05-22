@@ -1,0 +1,70 @@
+@use 'sass:map';
+
+/* Flex */
+
+.zamel-flex {
+    display: flex;
+}
+
+.zamel-flex-inline {
+    display: inline-flex;
+}
+
+.zamel-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.zamel-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.zamel-flex-x {
+    flex-direction: row;
+}
+
+.zamel-flex-y {
+    flex-direction: column;
+}
+
+.zamel-flex-y-mobile {
+
+    @media (width < map.get($media-devices-wmax, 'mobile')) {
+        flex-direction: column;
+    }
+}
+
+.zamel-flex-y-tablet-up {
+
+    @media (width >= map.get($media-devices-wmax, 'mobile')) {
+        flex-direction: column;
+    }
+}
+
+.zamel-flex-shrink {
+    flex-shrink: 1;
+}
+
+.zamel-flex-no-shrink {
+    flex-shrink: 0;
+}
+
+.zamel-flex-grow {
+    flex-grow: 1;
+}
+
+.zamel-flex-no-grow {
+    flex-grow: 0;
+}
+
+.zamel-flex-basis-0 {
+    flex-basis: 0;
+}
+
+.zamel-flex-basis-66_6p {
+    flex-basis: 66.6%;
+}
+
+.zamel-flex-basis-full {
+    flex-basis: 100%;
+}
+

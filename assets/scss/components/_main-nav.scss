@@ -1,0 +1,63 @@
+@use 'sass:map';
+
+.zamel-main-nav {
+    background-color: var(--zamel-c-light-blue);
+}
+
+.zamel-main-nav-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-block-size: 2.25em;
+    position: relative;
+}
+
+.zamel-main-nav-list {
+    display: flex;
+    font-weight: var(--zamel-fw-bold);
+    gap: 2em;
+
+    & > li {
+
+        & > a {
+            align-items: center;
+            display: flex;
+            gap: 0.5em;
+            padding-block: 0.5em;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        // &:hover {
+        //     border-bottom: 0.1875em solid var(--zamel-c-primary);
+        // }
+    }
+    
+    & li {
+
+        &[data-zamel-has-subnav] {
+            align-items: center;
+            display: flex;
+
+            & > * {
+
+                &::after {
+                    background: transparent url('./../img/icon/chevron.svg') no-repeat center / contain;
+                    block-size: 0.4375em;
+                    content: '';
+                    inline-size: 0.6875em;
+                }
+            }
+        }
+    }
+}
+
+.zamel-main-nav-subnav-bar {
+    background-color: var(--zamel-c-white);
+    left: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+}

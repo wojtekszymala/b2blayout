@@ -1,0 +1,243 @@
+.zamel-block {
+    display: block;
+}
+
+.zamel-section-heading {
+    font-size: var(--zamel-fs-2xl);
+    font-weight: var(--zamel-fw-bold);
+    margin-block: 0 1em;
+    text-align: center;
+
+    &::after {
+        border-bottom: 0.1em solid var(--zamel-c-primary);
+        content: '';
+        display: block;
+        inline-size: 1.25em;
+        margin-block-start: 0.2em;
+        margin-inline: auto;
+    }
+}
+
+.zamel-section-footer-btn {
+    margin-block-start: 2.5em;
+    margin-inline: auto;
+}
+
+.zamel-product-group-item {
+    align-items: center;
+    border: 0.3125em solid var(--zamel-c-silver);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 3em 2em 2em;
+}
+
+.zamel-product-group-item-name {
+    block-size: 1.75em;
+}
+
+.zamel-product-group-item-icon {
+    block-size: 2.5em;
+}
+
+.zamel-product-group-item-title {
+    font-size: var(--zamel-fs-m);
+    font-weight: var(--zamel-fw-bold);
+    margin-block: 0;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.zamel-page-heading {
+    text-wrap: balance;
+
+    &::after {
+        border-bottom: 0.1em solid var(--zamel-c-primary);
+        content: '';
+        display: block;
+        inline-size: 1.25em;
+        margin-block-start: 0.2em;
+    }
+
+    & ~ .zamel-page-heading {
+        margin-block-start: 1em;
+    }
+}
+
+.zamel-technical-bar {
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+    margin-inline: auto;
+    max-inline-size: 30em;
+    padding: 2.5em 2em 1em;
+    text-align: center;
+}
+
+.zamel-technical-bar-img {
+    inline-size: 4em;
+    margin-inline: auto;
+}
+
+.zamel-technical-bar-heading {
+    color: var(--zamel-c-primary);
+    margin-block: 1em 0.25em;
+}
+
+.zamel-technical-bar-open-time {
+    text-wrap: balance;
+}
+
+.zamel-sidebar-nav {
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-sidebar-nav-link {
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em 1.5em;
+}
+
+.zamel-sidebar-nav-link-icon {
+    block-size: 0.85em;
+    inline-size: 1em;
+    object-fit: contain;
+}
+
+.zamel-sidebar-nav-divider {
+    border-top: max(0.0625em, 1px) solid var(--zamel-c-black);
+    margin: 1em 1.5em;
+}
+
+.zamel-dl {
+    gap: 0.25em 2em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.zamel-heading-underline {
+    --zamel-heading-underline-c: var(--zamel-c-black);
+    
+    &::after {
+        border-top: max(0.0625em, 1px) solid var(--zamel-heading-underline-c);
+        content: '';
+        display: block;
+        margin-block-start: 1em;
+    }
+}
+
+.zamel-heading-underline--primary {
+    --zamel-heading-underline-c: var(--zamel-c-primary);
+}
+
+.zamel-overflow-x-auto-full {
+    max-inline-size: 100%;
+    overflow-x: auto;
+}
+
+.zamel-circle {
+    border-radius: 999999%;
+}
+
+.zamel-cursor-pointer {
+    cursor: pointer;
+}
+
+.zamel-relative {
+    position: relative;
+}
+
+.zamel-absolute {
+    position: absolute;
+}
+
+.zamel-sticky {
+    position: sticky;
+}
+
+.zamel-fixed {
+    position: fixed;
+}
+
+.zamel-top {
+    top: 0;
+}
+
+.zamel-top-auto {
+    top: auto;
+}
+
+.zamel-top-full {
+    top: 100%;
+}
+
+.zamel-left {
+    left: 0;
+}
+
+.zamel-left-auto {
+    left: auto;
+}
+
+.zamel-left-full {
+    left: 100%;
+}
+
+.zamel-right {
+    right: 0;
+}
+
+.zamel-right-auto {
+    right: auto;
+}
+
+.zamel-right-full {
+    right: 100%;
+}
+
+.zamel-bottom {
+    bottom: 0;
+}
+
+.zamel-bottom-auto {
+    bottom: auto;
+}
+
+.zamel-bottom-full {
+    bottom: 100%;
+}
+
+.zamel-z-index {
+    z-index: 1;
+}
+
+.zamel-focus-target {
+
+    .zamel-focus-source:not(:focus-within) & {
+        display: none;
+    }
+}
+
+.zamel-side-lines {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    white-space: nowrap;
+
+    &::before {
+        border-top: max(0.0625em, 1px) solid currentColor;
+        content: '';
+        flex-basis: 100%;
+    }
+
+    &::after {
+        border-top: max(0.0625em, 1px) solid currentColor;
+        content: '';
+        flex-basis: 100%;
+    }
+}
+
+.zamel-hover-no-underline {
+
+    &:hover {
+        text-decoration: none;
+    }
+}

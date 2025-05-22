@@ -1,0 +1,65 @@
+@use 'sass:map';
+
+/* Font Sizes */
+
+@each $key, $value in $font-sizes {
+    .zamel-fs-#{$key} {
+        font-size: var(--zamel-fs-#{$key});
+    }
+}
+
+/* Font Weights */
+
+@each $key, $value in $font-weights {
+    .zamel-fw-#{$key} {
+        font-weight: var(--zamel-fw-#{$key});
+    }
+}
+
+/* Headings */
+
+@each $key, $value in $font-sizes {
+    .zamel-heading-#{$key} {
+        font-size: var(--zamel-fs-#{$key});
+        font-weight: var(--zamel-fw-bold);
+    }
+}
+
+/* Texts */
+
+@each $key, $value in $font-sizes {
+    .zamel-text-#{$key} {
+        font-size: var(--zamel-fs-#{$key});
+        font-weight: var(--zamel-fw-base);
+    }
+}
+
+/* Alignment & Styles */
+
+.zamel-text-nowrap {
+    white-space: nowrap;
+}
+
+.zamel-text-left {
+    text-align: left;
+}
+
+.zamel-text-center {
+    text-align: center;
+}
+
+.zamel-text-right {
+    text-align: right;
+}
+
+.zamel-text-balance {
+    text-wrap: balance;
+}
+
+.zamel-text-pretty {
+    text-wrap: pretty;
+}
+
+.zamel-text-strike {
+    text-decoration: line-through;
+}

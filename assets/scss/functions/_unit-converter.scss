@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+@function pxToUnit($px, $unit) {
+    @return math.div($px, 16) + $unit;
+}
+
+@function pxToRem($px) {
+    @return pxToUnit($px, rem);
+}
+
+@function pxToEm($px) {
+    @return pxToUnit($px, em);
+}

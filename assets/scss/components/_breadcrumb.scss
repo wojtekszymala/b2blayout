@@ -1,0 +1,35 @@
+.zamel-breadcrumbs {
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+
+    & > li {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        & + li {
+
+            &::before {
+                content: '/';
+                display: inline;
+                font-weight: var(--zamel-fw-base);
+            }
+        }
+
+        & > a {
+            align-items: center;
+            display: flex;
+            gap: 0.75em;
+
+            & > img {
+                block-size: 1.5em;
+                margin-block-start: -0.125em; /* Adjust icon position */
+            }
+        }
+
+        &:nth-last-child(1) {
+            font-weight: var(--zamel-fw-bold);
+        }
+    }
+}
