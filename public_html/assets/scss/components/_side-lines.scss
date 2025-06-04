@@ -1,0 +1,18 @@
+.zamel-side-lines {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    white-space: nowrap;
+
+    &::before {
+        border-block-start: max(0.0625em, 1px) solid currentColor;
+        content: '';
+        flex-basis: 100%;
+    }
+
+    &::after {
+        border-block-start: max(0.0625em, 1px) solid currentColor;
+        content: '';
+        flex-basis: 100%;
+    }
+}

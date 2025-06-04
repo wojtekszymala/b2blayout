@@ -1,0 +1,51 @@
+@use './../functions/unit-converter' as uc;
+
+.zamel-container {
+    margin-inline: auto;
+    max-inline-size: #{uc.pxToRem(1364)};
+    padding-inline: #{uc.pxToRem(16)};
+}
+
+.zamel-container--m {
+    max-inline-size: #{uc.pxToRem(1456)};
+}
+
+.zamel-container-x {
+    container-type: inline-size;
+}
+
+.zamel-container-y {
+    container-type: block-size;
+}
+
+.zamel-overflow-x-auto {
+    overflow-x: auto;
+}
+
+.zamel-overflow-y-auto {
+    overflow-y: auto;
+}
+
+.zamel-overflow-x-auto-full {
+    max-inline-size: 100%;
+    overflow-x: auto;
+}
+
+.zamel-overflow-y-auto-full {
+    max-block-size: 100%;
+    overflow-y: auto;
+}
+
+.zamel-overflow-y-auto-full-screen-n10 {
+    max-block-size: calc(100dvh - 10rem);
+    overflow-y: auto;
+}
+
+.zamel-scrollbar-hidden {
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar { /* Chrome, Safari and Opera */
+       display: none;
+    }
+}

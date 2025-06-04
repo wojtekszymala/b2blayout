@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+/* Colors */
+
+@each $key, $value in $colors {
+    .zamel-c-#{$key} {
+        color: var(--zamel-c-#{$key});
+    }
+}
+
+/* Background Colors */
+
+@each $key, $value in $colors {
+    .zamel-bgc-#{$key} {
+        background-color: var(--zamel-c-#{$key});
+    }
+}
+
+.zamel-mobile-bgc-light-blue {
+
+    @media (width < map.get($breakpoints, s)) {
+        background-color: var(--zamel-c-light-blue);
+    }
+}
+
+.zamel-tablet-up-bgc-light-blue {
+
+    @media (width >= map.get($breakpoints, s)) {
+        background-color: var(--zamel-c-light-blue);
+    }
+}
+
+.zamel-hover-bc-light-blue {
+
+    &:hover {
+        background-color: var(--zamel-c-light-blue);
+    }
+}

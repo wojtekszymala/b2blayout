@@ -1,0 +1,151 @@
+@use 'sass:map';
+
+.zamel-main-nav {
+    display: flex;
+
+    @media (width < map.get($breakpoints, s)) {
+        flex-direction: column;
+        inline-size: 100%;
+        max-block-size: 100%;
+        overflow-y: auto;
+    }
+
+    @media (width >= map.get($breakpoints, s)) {
+        column-gap: 2em;
+    }
+
+    & > li {
+
+        & > a {
+            align-items: center;
+            border-block-end: max(1px, 0.1875em) solid transparent;
+            display: flex;
+            font-weight: var(--zamel-fw-bold);
+            gap: 0.5em;
+            padding-block: 0.66em 0.3125em;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        @media (width >= map.get($breakpoints, s)) {
+
+            &:hover {
+
+                & > a {
+                    border-color: var(--zamel-c-primary);
+                }
+            }
+        }
+    }
+    
+    & li {
+
+        &.zamel-has-sub-nav {
+
+            @media (width >= map.get($breakpoints, s)) {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            & > * {
+
+                &::after {
+                    background: transparent url('./../img/icon/chevron.svg') no-repeat center / contain;
+                    block-size: 0.4375em;
+                    content: '';
+                    inline-size: 0.6875em;
+                }
+            }
+        }
+    }
+
+    & a {
+        inline-size: fit-content;
+    }
+}
+
+.zamel-sub-nav-container {
+    background-color: var(--zamel-c-white);
+
+    @media (width >= map.get($breakpoints, s)) {
+        left: 1rem;
+        position: absolute;
+        right: 1rem;
+        top: 100%;
+        z-index: 1;
+    }
+}
+
+.zamel-sub-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    & > li {
+        align-items: center;
+        display: flex;
+        gap: 1em;
+
+        &::before {
+            background: transparent url('./../img/icon/chevron.svg') no-repeat center / contain;
+            block-size: 0.4375em;
+            content: '';
+            inline-size: 0.6875em;
+            rotate: -90deg;
+        }
+    }
+}
+
+.zamel-sub-nav-hidden {
+    display: none;
+}
+
+.zamel-has-sub-nav {
+
+    &:focus-within {
+
+        & .zamel-sub-nav-hidden {
+            display: block;
+        }
+    }
+
+    @media (width >= map.get($breakpoints, s)) {
+
+        &:hover {
+
+            & .zamel-sub-nav-hidden {
+                display: block;
+            }
+        }
+    }
+}
+
+#zamel-main-nav-toggler:not(:checked) ~ #zamel-main-nav {
+    @media (width < map.get($breakpoints, s)) {
+        display: none;
+    }
+}
+
+.zamel-mobile-main-nav-wrapper {
+    @media (width < map.get($breakpoints, s)) {
+        background-color: var(--zamel-c-white);
+        display: flex;
+        flex-direction: column;
+        inset: 0;
+        position: fixed;
+        z-index: 2;
+    }
+}
+
+#zamel-main-nav {
+
+    &:has(
+        .zamel-has-sub-nav:hover,
+        .zamel-has-sub-nav:focus-within
+    ) {
+        box-shadow: 0 100dvh 0 100dvh rgba(0, 0, 0, 0.5);
+    }
+}

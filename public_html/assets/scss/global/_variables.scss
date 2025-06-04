@@ -1,0 +1,39 @@
+@use './../functions/unit-converter' as uc;
+
+$colors: (
+    'black': #000,
+    'light-blue': #F7FAFF,
+    'grey': #747474,
+    'grey-0_4': #74747466,
+    'green': #49873F,
+    'light': #f9faf6,
+    'light-grey': #ececec,
+    'silver': #e6e6e6,
+    'yellow': #F5C944,
+    'white': #fff,
+    'primary': #DE000E,
+);
+
+$font-sizes: (
+    2xl: #{uc.pxToRem(40)},
+    xl: #{uc.pxToRem(32)},
+    l: #{uc.pxToRem(24)},
+    m: #{uc.pxToRem(18)},
+    base: #{uc.pxToRem(16)},
+    s: #{uc.pxToRem(14)},
+    xs: #{uc.pxToRem(12)},
+    2xs: #{uc.pxToRem(10)},
+    3xs: #{uc.pxToRem(8)},
+);
+
+$font-weights: (
+    base: 400,
+    bold: 700,
+);
+
+$breakpoints: (
+    xs: #{uc.pxToEm(480)},
+    s: #{uc.pxToEm(768)},
+    m: #{uc.pxToEm(1024)},
+    l: #{uc.pxToEm(1200)},
+);

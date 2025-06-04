@@ -1,0 +1,130 @@
+@use 'sass:map';
+
+/* Font Sizes */
+
+@each $key, $value in $font-sizes {
+    .zamel-fs-#{$key} {
+        font-size: var(--zamel-fs-#{$key});
+    }
+}
+
+.zamel-fs-0_825cqi {
+    font-size: 0.825cqi;
+}
+
+/* Font Weights */
+
+@each $key, $value in $font-weights {
+    .zamel-fw-#{$key} {
+        font-weight: var(--zamel-fw-#{$key});
+    }
+}
+
+/* Headings */
+
+@each $key, $value in $font-sizes {
+    .zamel-heading-#{$key} {
+        font-size: var(--zamel-fs-#{$key});
+        font-weight: var(--zamel-fw-bold);
+    }
+}
+
+/* Texts */
+
+@each $key, $value in $font-sizes {
+    .zamel-text-#{$key} {
+        font-size: var(--zamel-fs-#{$key});
+        font-weight: var(--zamel-fw-base);
+    }
+}
+
+/* Alignment & Styles */
+
+.zamel-text-nowrap {
+    white-space: nowrap;
+}
+
+.zamel-text-left {
+    text-align: left;
+}
+
+.zamel-text-center {
+    text-align: center;
+}
+
+.zamel-text-right {
+    text-align: right;
+}
+
+.zamel-text-balance {
+    text-wrap: balance;
+}
+
+.zamel-text-pretty {
+    text-wrap: pretty;
+}
+
+.zamel-text-strike {
+    text-decoration: line-through;
+}
+
+.zamel-section-heading {
+    font-size: var(--zamel-fs-2xl);
+    font-weight: var(--zamel-fw-bold);
+    margin-block: 0 1em;
+    text-align: center;
+
+    &::after {
+        border-block-end: 0.1em solid var(--zamel-c-primary);
+        content: '';
+        display: block;
+        inline-size: 1.25em;
+        margin-block-start: 0.2em;
+        margin-inline: auto;
+    }
+}
+
+.zamel-page-heading {
+    text-wrap: balance;
+
+    &::after {
+        border-block-end: 0.1em solid var(--zamel-c-primary);
+        content: '';
+        display: block;
+        inline-size: 1.25em;
+        margin-block-start: 0.2em;
+    }
+
+    & ~ .zamel-page-heading {
+        margin-block-start: 1em;
+    }
+}
+
+.zamel-heading-underline {
+    --zamel-heading-underline-c: var(--zamel-c-black);
+    
+    &::after {
+        border-block-start: max(0.0625em, 1px) solid var(--zamel-heading-underline-c);
+        content: '';
+        display: block;
+        margin-block-start: 1em;
+    }
+}
+
+.zamel-heading-underline--primary {
+    --zamel-heading-underline-c: var(--zamel-c-primary);
+}
+
+.zamel-hover-underline {
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.zamel-hover-no-underline {
+
+    &:hover {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,84 @@
+/* Form Input, Select, Textarea */
+
+.zamel-form-input {
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+    background-color: var(--zamel-c-white);
+    color: var(--zamel-c-black);
+    flex-grow: 1;
+    font-size: var(--zamel-fs-s);
+    inline-size: 100%;
+    padding: 0.75em 1em;
+
+    &::placeholder {
+        color: inherit;
+    }
+
+    &-magnifier {
+        background: url('./../img/icon/magnifier-3.svg') no-repeat calc(100% - 0.75em) 50% / 1.25em;
+    }
+}
+
+/* Form Checkbox */
+
+.zamel-form-checkbox {
+    align-items: center;
+    appearance: none;
+    background-color: var(--zamel-c-white);
+    block-size: 1em;
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    inline-size: 1em;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+
+    &:checked {
+        background-color: var(--zamel-c-primary);
+        border-color: var(--zamel-c-primary);
+
+        &::before {
+            background: transparent url('./../img/icon/check.svg') no-repeat center / contain;
+            bottom: 5%;
+            content: '';
+            left: 5%;
+            position: absolute;
+            right: 5%;
+            top: 5%;
+        }
+    }
+}
+
+/* Form Radio */
+
+.zamel-form-radio {
+    align-items: center;
+    appearance: none;
+    background-color: var(--zamel-c-white);
+    block-size: 1em;
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    inline-size: 1em;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+
+    &:checked {
+        background-color: var(--zamel-c-primary);
+        border-color: var(--zamel-c-primary);
+
+        &::before {
+            background-color: var(--zamel-c-white);
+            border-radius: 50%;
+            content: '';
+            inset: 0.25em;
+            position: absolute;
+        }
+    }
+}

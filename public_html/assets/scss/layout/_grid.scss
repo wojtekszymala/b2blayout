@@ -1,0 +1,83 @@
+@use 'sass:map';
+@use './../functions/unit-converter' as uc;
+
+/* Grid */
+
+.zamel-grid {
+    --zamel-grid-columns: 1;
+
+    display: grid;
+    grid-template-columns: repeat(var(--zamel-grid-columns), 1fr);
+}
+
+.zamel-grid-inline {
+    display: inline-grid;
+}
+
+.zamel-grid--repeat-auto-fill {
+    --zamel-grid-item-min-w: 100%;
+
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--zamel-grid-item-min-w), 100%), 1fr));
+
+    #zamel-grid-list-type-x:checked ~ & {
+        --zamel-grid-item-min-w: 100% !important;
+    }
+}
+
+.zamel-grid--repeat-auto-fit {
+    --zamel-grid-item-min-w: 100%;
+
+    grid-template-columns: repeat(auto-fitl, minmax(min(var(--zamel-grid-item-min-w), 100%), 1fr));
+
+    #zamel-grid-list-type-x:checked ~ & {
+        --zamel-grid-item-min-w: 100% !important;
+    }
+}
+
+.zamel-grid-item {
+    container: zamel-grid-item / inline-size;
+    display: grid;
+}
+
+.zamel-grid--cols-2 {
+    --zamel-grid-columns: 2;
+}
+
+.zamel-grid-template-y-auto-1fr {
+    grid-template-columns: auto 1fr;
+}
+
+.zamel-grid-template-y-1em-1fr {
+    grid-template-columns: 1em 1fr;
+}
+
+.zamel-grid-template-y-1em-auto-1fr {
+    grid-template-columns: 1em auto 1fr;
+}
+
+.zamel-grid-template-y-1_5em-auto-1fr {
+    grid-template-columns: 1.5em auto 1fr;
+}
+
+.zamel-tablet-up-grid--cols-2 {
+
+    @media (width >= map.get($breakpoints, s)) {
+        --zamel-grid-columns: 2;
+    }
+}
+
+.zamel-grid--repeat-auto-fill--14 {
+    --zamel-grid-item-min-w: 14em;
+}
+
+.zamel-grid--repeat-auto-fill--16 {
+    --zamel-grid-item-min-w: 16em;
+}
+
+.zamel-grid--repeat-auto-fill--20 {
+    --zamel-grid-item-min-w: 20em;
+}
+
+.zamel-grid--repeat-auto-fill--23 {
+    --zamel-grid-item-min-w: 23em;
+}

@@ -1,0 +1,13 @@
+.zamel-banner {
+    background-color: var(--zamel-c-grey-04);
+    position: relative;
+}
+
+.zamel-banner-heading {
+    color: var(--zamel-c-white);
+    left: 7%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+}

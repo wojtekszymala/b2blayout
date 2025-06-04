@@ -1,0 +1,247 @@
+@use 'sass:map';
+
+/* Size REM */
+
+.zamel-size-1_5 {
+    block-size: 1.5rem;
+    inline-size: 1.5rem;
+}
+
+/* Size EM */
+
+.zamel-size-1em {
+    block-size: 1em;
+    inline-size: 1em;
+}
+
+.zamel-size-1_25em {
+    block-size: 1.25em;
+    inline-size: 1.25em;
+}
+
+.zamel-size-1_5em {
+    block-size: 1.5em;
+    inline-size: 1.5em;
+}
+
+.zamel-size-2em {
+    block-size: 2em;
+    inline-size: 2em;
+}
+
+.zamel-size-2_5em {
+    block-size: 2.5em;
+    inline-size: 2.5em;
+}
+
+.zamel-size-3em {
+    block-size: 3em;
+    inline-size: 3em;
+}
+
+.zamel-size-3_5em {
+    block-size: 3.5em;
+    inline-size: 3.5em;
+}
+
+.zamel-size-5em {
+    block-size: 5em;
+    inline-size: 5em;
+}
+
+.zamel-size-6em {
+    block-size: 6em;
+    inline-size: 6em;
+}
+
+.zamel-size-7_5em {
+    block-size: 7.5em;
+    inline-size: 7.5em;
+}
+
+/* Size Horizontal */
+
+.zamel-size-x-min {
+    inline-size: min-content;
+}
+
+.zamel-size-x-fit {
+    inline-size: fit-content;
+}
+
+.zamel-size-x-max {
+    inline-size: max-content;
+}
+
+.zamel-tablet-up-min-size-x-32 {
+
+    @media (width >= map.get($breakpoints, s)) {
+        min-inline-size: 32rem;
+    }
+}
+
+/* Size Horizontal REM */
+
+.zamel-size-x-1 {
+    inline-size: 1rem;
+}
+
+.zamel-size-x-1_5 {
+    inline-size: 1.5rem;
+}
+
+.zamel-size-x-2 {
+    inline-size: 2rem;
+}
+
+.zamel-size-x-4 {
+    inline-size: 4rem;
+}
+
+.zamel-size-x-14 {
+    inline-size: 14rem;
+}
+
+.zamel-tablet-up-size-x-16 {
+
+    @media (width >= map.get($breakpoints, s)) {
+        inline-size: 16rem;
+    }
+}
+
+.zamel-tablet-up-size-x-24 {
+
+    @media (width >= map.get($breakpoints, s)) {
+        inline-size: 24rem;
+    }
+}
+
+.zamel-max-size-x-32 {
+    max-inline-size: 32rem;
+}
+
+.zamel-max-size-x-48 {
+    max-inline-size: 48rem;
+}
+
+.zamel-max-size-x-58 {
+    max-inline-size: 58rem;
+}
+
+.zamel-max-size-x-65 {
+    max-inline-size: 65rem;
+}
+
+.zamel-max-size-s-120 {
+    max-inline-size: 120rem;
+}
+
+/* Size Horizontal EM */
+
+.zamel-size-x-1em {
+    inline-size: 1em;
+}
+
+.zamel-size-x-1_375em {
+    inline-size: 1.375em;
+}
+
+.zamel-size-x-1_5em {
+    inline-size: 1.5em;
+}
+
+.zamel-size-x-3em {
+    inline-size: 3em;
+}
+
+.zamel-size-x-4em {
+    inline-size: 4em;
+}
+
+.zamel-size-x-10em {
+    inline-size: 10em;
+}
+
+.zamel-size-x-20em {
+    inline-size: 20em;
+}
+
+/* Size Horizontal Percentage */
+
+.zamel-max-size-x-full {
+    max-inline-size: 100%;
+}
+
+/* Size Horizontal Min REM */
+
+.zamel-tablet-up-max-size-x-12 {
+
+    @media (width >= map.get($breakpoints, s)) {
+        max-inline-size: 12rem;
+    }
+}
+
+/* Size Horizontal Percentage */
+
+.zamel-size-x-full {
+    inline-size: 100%;
+}
+
+.zamel-mobile-size-x-full {
+    
+    @media (width < map.get($breakpoints, s)) {
+        inline-size: 100%;
+    }
+}
+
+/* Size Vertical REM */
+
+.zamel-size-y-4 {
+    block-size: 4rem;
+}
+
+/* Size Vertical EM */
+
+.zamel-size-y-0_75em {
+    block-size: 0.75em;
+}
+
+.zamel-size-y-1em {
+    block-size: 1em;
+}
+
+
+.zamel-size-y-1_25em {
+    block-size: 1.25em;
+}
+
+.zamel-min-size-y-2_5em {
+    min-block-size: 2.5em;
+}
+
+.zamel-size-y-1_75em {
+    block-size: 1.75em;
+}
+
+.zamel-size-y-3em {
+    block-size: 3em;
+}
+
+.zamel-size-y-5_5em {
+    block-size: 5.5em;
+}
+
+/* Size Vertical Percentage */
+
+.zamel-size-y-full {
+    block-size: 100%;
+}
+
+/* Size Items Full */
+
+.zamel-items-basis-full {
+
+    & > * {
+        flex-basis: 100%;
+    }
+}

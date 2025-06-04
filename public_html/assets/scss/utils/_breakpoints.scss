@@ -1,0 +1,77 @@
+@use 'sass:map';
+
+@mixin breakpoint-xs {
+    @media (width < map.get($breakpoints, xs)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-s {
+    @media (map.get($breakpoints, xs) <= width < map.get($breakpoints, s)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-m {
+    @media (map.get($breakpoints, s) <= width < map.get($breakpoints, m)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-l {
+    @media (map.get($breakpoints, m) <= width < map.get($breakpoints, l)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xl {
+    @media (map.get($breakpoints, l) <= width) {
+        @content;
+    }
+}
+
+.zamel-hidden {
+    display: none !important;
+}
+
+.zamel-desktop-only {
+
+    @media (width < map.get($breakpoints, m)) {
+        display: none !important;
+    }
+}
+
+.zamel-desktop-hidden {
+    
+    @media (map.get($breakpoints, m) <= width) {
+        display: none !important;
+    }
+}
+
+.zamel-tablet-only {
+
+    @media (width < map.get($breakpoints, s)) or (map.get($breakpoints, m) <= width) {
+        display: none !important;
+    }
+}
+
+.zamel-tablet-hidden {
+    
+    @media (map.get($breakpoints, s) <= width < map.get($breakpoints, m)) {
+        display: none !important;
+    }
+}
+
+.zamel-mobile-only {
+
+    @media (map.get($breakpoints, s) <= width) {
+        display: none !important;
+    }
+}
+
+.zamel-mobile-hidden {
+    
+    @media (width < map.get($breakpoints, s)) {
+        display: none !important;
+    }
+}

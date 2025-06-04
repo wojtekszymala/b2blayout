@@ -1,0 +1,21 @@
+@use './../functions/unit-converter' as uc;
+
+.zamel-table {
+    border: max(uc.pxToEm(1), 1px) solid var(--zamel-c-black);
+    border-collapse: collapse;
+    inline-size: 100%;
+
+    & th,
+    & td {
+        border: max(uc.pxToEm(1), 1px) solid var(--zamel-c-black);
+        padding: 1em;
+    }
+
+    & th {
+        background-color: var(--zamel-c-light-blue);
+    }
+
+    &-layout-fixed {
+        table-layout: fixed;
+    }
+}

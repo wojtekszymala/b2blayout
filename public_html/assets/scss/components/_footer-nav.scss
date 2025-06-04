@@ -1,0 +1,44 @@
+@use 'sass:map';
+
+.zamel-footer-nav {
+    --zamel-footer-nav-columns: 2;
+
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(var(--zamel-footer-nav-columns), 1fr);
+    justify-content: space-between;
+
+    @media (width >= map.get($breakpoints, s)) {
+        padding-block-start: 2.5em;
+    }
+
+    @media (width >= map.get($breakpoints, m)) {
+        --zamel-footer-nav-columns: 4;
+    }
+}
+
+.zamel-footer-nav-heading {
+    border-block-end: max(0.0625em, 1px) solid var(--zamel-c-black);
+    font-size: var(--zamel-fs-m);
+    font-weight: var(--zamel-fw-bold);
+    margin-block: 0 3em;
+    padding-block-end: 1em;
+    position: relative;
+
+    &::after {
+        border-block-start: 0.1875rem solid var(--zamel-c-primary);
+        content: '';
+        display: block;
+        inline-size: 2rem;
+        position: absolute;
+        top: calc(100% - 0.0625rem);
+    }
+}
+
+.zamel-footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-block: 3em 1em;
+    padding-inline-start: 0;
+}

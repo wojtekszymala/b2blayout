@@ -1,0 +1,110 @@
+.zamel-btn {
+    --zamel-btn-bc: var(--zamel-c-black);
+    --zamel-btn-bw: 0.0625em;
+    --zamel-btn-bgc: transparent;
+    --zamel-btn-c: var(--zamel-c-black);
+    --zamel-btn-fs: var(--zamel-fs-s);
+    --zamel-btn-fw: var(--zamel-fw-bold);
+    --zamel-btn-p: 0.75em 1em 0.5em;
+    --zamel-btn-text-transform: uppercase;
+
+    align-items: center;
+    background-color: var(--zamel-btn-bgc); 
+    border: var(--zamel-btn-bw) solid var(--zamel-btn-bc);
+    color: var(--zamel-btn-c);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1em;
+    font-weight: var(--zamel-btn-fw);
+    gap: 1em;
+    inline-size: fit-content;
+    justify-content: center;
+    padding: var(--zamel-btn-p);
+    text-align: center;
+    text-decoration: none;
+    text-transform: var(--zamel-btn-text-transform);
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    & > * {
+        flex: 1;
+        min-inline-size: fit-content;
+    }
+
+    & > img {
+        flex: 0 0 auto;
+    }
+
+    &--primary {
+        --zamel-btn-bc: var(--zamel-c-primary);
+        --zamel-btn-bgc: var(--zamel-c-primary);
+        --zamel-btn-c: var(--zamel-c-white);
+
+        &:is(a, button, label[for]):hover {
+            --zamel-btn-bc: var(--zamel-c-black);
+            --zamel-btn-bgc: var(--zamel-c-black);
+        }
+    }
+
+    &--secondary {
+        --zamel-btn-bc: var(--zamel-c-black);
+        --zamel-btn-bgc: var(--zamel-c-white);
+        --zamel-btn-c: var(--zamel-c-black);
+
+        &:is(a, button, label[for]):hover {
+            --zamel-btn-bc: var(--zamel-c-black);
+            --zamel-btn-bgc: var(--zamel-c-black);
+            --zamel-btn-c: var(--zamel-c-white);
+        }
+    }
+
+    &--tertiary {
+        --zamel-btn-bc: var(--zamel-c-light-blue);
+        --zamel-btn-bgc: var(--zamel-c-light-blue);
+        --zamel-btn-c: var(--zamel-c-black);
+    }
+
+    &--quaternary {
+        --zamel-btn-bw: 0;
+        --zamel-btn-text-transform: none;
+    }
+
+    &--ghost {
+        --zamel-btn-bw: 0;
+        --zamel-btn-p: 0;
+    }
+
+    &--default {
+        --zamel-btn-bw: 0;
+        --zamel-btn-p: 0;
+        --zamel-btn-text-transform: none;
+    }
+
+    &--dark {
+        --zamel-btn-bc: var(--zamel-c-black);
+        --zamel-btn-bgc: var(--zamel-c-black);
+        --zamel-btn-c: var(--zamel-c-white);
+
+        &:is(a, button, label[for]):hover {
+            --zamel-btn-bc: var(--zamel-c-primary);
+            --zamel-btn-bgc: var(--zamel-c-primary);
+        }
+    }
+
+    &--success {
+        --zamel-btn-bc: var(--zamel-c-green);
+        --zamel-btn-bgc: var(--zamel-c-green);
+        --zamel-btn-c: var(--zamel-c-white);
+    }
+
+    &--warning {
+        --zamel-btn-bc: var(--zamel-c-yellow);
+        --zamel-btn-bgc: var(--zamel-c-yellow);
+    }
+
+    &--disabled {
+        --zamel-btn-c: var(--zamel-c-silver);
+    }
+}

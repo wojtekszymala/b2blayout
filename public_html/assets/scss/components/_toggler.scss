@@ -1,0 +1,243 @@
+@use 'sass:map';
+
+.zamel-toggler-checkbox {
+
+    &:not(:checked) {
+
+        & ~ {
+
+            & .zamel-toggler-off-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-toggler-off-hidden {
+                    display: none;
+                }
+            }
+
+            & .zamel-mobile-toggler-off-hidden {
+
+                @media (width < map.get($breakpoints, s)) {
+                    display: none;
+                }
+            }
+
+            & * {
+
+                & .zamel-mobile-toggler-off-hidden {
+
+                    @media (width < map.get($breakpoints, s)) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &:checked {
+
+        & ~ {
+
+            & .zamel-toggler-on-hidden {
+                display: none;
+            }
+
+            & .zamel-toggler-on-c-primary {
+                color: var(--zamel-c-primary);
+            }
+
+            & * {
+
+                & .zamel-toggler-on-hidden {
+                    display: none;
+                }
+
+                & .zamel-toggler-on-c-primary {
+                    color: var(--zamel-c-primary);
+                }
+            }
+        }
+    }
+}
+
+#zamel-grid-list-type-x {
+
+    &:not(:checked) {
+
+        & ~ {
+
+            & .zamel-grid-list-type-x-off-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-grid-list-type-x-off-hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &:checked {
+
+        & ~ {
+
+            & .zamel-grid-list-type-x-on-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-grid-list-type-x-on-hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#zamel-grid-list-type-y {
+
+    &:not(:checked) {
+
+        & ~ {
+
+            & .zamel-grid-list-type-y-off-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-grid-list-type-y-off-hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &:checked {
+
+        & ~ {
+
+            & .zamel-grid-list-type-y-on-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-grid-list-type-y-on-hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#zamel-product-tab-1 {
+
+    &:not(:checked) {
+
+        & ~ {
+
+            & .zamel-product-tab-1-off-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-product-tab-1-off-hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &:checked {
+
+        & ~ {
+
+            & .zamel-product-tab-1-on-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-product-tab-1-on-hidden {
+                    display: none;
+                }
+            }
+
+            & .zamel-product-tab-1-on-btn--secondary {
+                --zamel-btn-bc: var(--zamel-c-black);
+                --zamel-btn-bgc: var(--zamel-c-black);
+                --zamel-btn-c: var(--zamel-c-white);
+            }
+
+            & * {
+
+                .zamel-product-tab-1-on-btn--secondary {
+                    --zamel-btn-bc: var(--zamel-c-black);
+                    --zamel-btn-bgc: var(--zamel-c-black);
+                    --zamel-btn-c: var(--zamel-c-white);
+                }
+            }
+        }
+    }
+}
+
+#zamel-product-tab-2 {
+
+    &:not(:checked) {
+
+        & ~ {
+
+            & .zamel-product-tab-2-off-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-product-tab-2-off-hidden {
+                    display: none;
+                }
+            }
+
+            
+        }
+    }
+
+    &:checked {
+
+        & ~ {
+
+            & .zamel-product-tab-2-on-hidden {
+                display: none;
+            }
+
+            & * {
+
+                & .zamel-product-tab-2-on-hidden {
+                    display: none;
+                }
+            }
+
+            & .zamel-product-tab-2-on-btn--secondary {
+                --zamel-btn-bc: var(--zamel-c-black);
+                --zamel-btn-bgc: var(--zamel-c-black);
+                --zamel-btn-c: var(--zamel-c-white);
+            }
+
+            & * {
+
+                .zamel-product-tab-2-on-btn--secondary {
+                    --zamel-btn-bc: var(--zamel-c-black);
+                    --zamel-btn-bgc: var(--zamel-c-black);
+                    --zamel-btn-c: var(--zamel-c-white);
+                }
+            }
+        }
+    }
+}

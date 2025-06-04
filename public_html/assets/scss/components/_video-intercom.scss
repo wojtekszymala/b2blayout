@@ -1,0 +1,57 @@
+@use 'sass:map';
+
+.zamel-flex-video-intercom {
+
+    @media (width < map.get($breakpoints, s)) {
+        row-gap: 3em;
+        flex-direction: column-reverse;
+    }
+}
+
+.zamel-video-intercom-header {
+    flex-basis: 50%;
+
+    @media (width >= map.get($breakpoints, s)) {
+        padding-inline-end: 3em;
+    }
+}
+
+.zamel-video-intercom-heading {
+    font-size: var(--zamel-fs-xl);
+    font-weight: var(--zamel-fw-bold);
+    margin-block: 0 1em;
+    text-wrap: balance;
+}
+
+.zamel-video-intercom-description {
+    margin-block: 1em 0;
+    text-wrap: balance;
+}
+
+.zamel-video-intercom-figure {
+    flex-grow: 1;
+    margin: 0;
+    padding-inline-start: 5em;
+    position: relative;
+
+    @media (width < map.get($breakpoints, s)) {
+        margin-inline-end: -1em;
+    }
+}
+
+.zamel-video-intercom-figcaption {
+    background-color: var(--zamel-c-primary);
+    bottom: 10%;
+    color: var(--zamel-c-white);
+    font-size: var(--zamel-fs-m);
+    line-height: 1;
+    padding: 1.5em 1.75em;
+    position: absolute;
+    text-align: center;
+    transform: translate3d(-50%, 0, 0);
+
+    & > strong {
+        display: block;
+        font-size: 5em;
+    }
+}

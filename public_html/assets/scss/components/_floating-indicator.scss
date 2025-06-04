@@ -1,0 +1,18 @@
+[data-floating-indicator] {
+    position: relative;
+
+    &::after {
+        background-color: var(--zamel-c-primary);
+        color: var(--zamel-c-white);
+        content: attr(data-floating-indicator);
+        font-size: var(--zamel-fs-xs);
+        font-weight: var(--zamel-fw-bold);
+        inline-size: 1.66em;
+        line-height: 1;
+        padding-block: 0.25em;
+        position: absolute;
+        left: 2em;
+        text-align: center;
+        top: 0;
+    }
+}

@@ -1,0 +1,91 @@
+@use 'sass:map';
+
+.zamel-footer {
+    margin-block-start: auto;
+    overflow: clip;
+}
+
+.zamel-footer-top-container {
+    display: flex;
+
+    @media (width < map.get($breakpoints, s)) {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    @media (width >= map.get($breakpoints, s)) {
+        gap: 3em;
+    }
+
+    & > .zamel-footer-company {
+        flex-shrink: 0;
+
+        @media (width < map.get($breakpoints, s)) {
+            padding-block: 1em;
+        }
+
+        @media (width >= map.get($breakpoints, s)) {
+            padding-block-start: 2.5em;
+            padding-inline-end: 3.5em;
+        }
+
+        &.zamel-footer-shadow {
+
+            &::before {
+                @media (width < map.get($breakpoints, s)) {
+                    --zamel-footer-shadow-right: -1em;
+                }
+
+                @media (width >= map.get($breakpoints, s)) {
+                    --zamel-footer-shadow-bottom: -8.5rem;
+                }
+            }
+        }
+    }
+
+    & > .zamel-footer-nav {
+        flex-grow: 1;
+    }
+}
+
+.zamel-footer-bottom {
+    border-block-start: max(0.0625em, 1px) solid var(--zamel-c-black);
+    padding-block: 2rem;
+}
+
+.zamel-footer-bottom-container {
+    align-items: center;
+    display: flex;
+
+    @media (width < map.get($breakpoints, s)) {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    @media (width >= map.get($breakpoints, s)) {
+        gap: 1em;
+        justify-content: space-between;
+    }
+}
+
+.zamel-footer-company {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.zamel-footer-shadow {
+    position: relative;
+
+    &::before {
+        background-color: var(--zamel-c-light-blue);
+        bottom: var(--zamel-footer-shadow-bottom, 0);
+        content: '';
+        display: block;
+        left: -100vw;
+        position: absolute;
+        right: var(--zamel-footer-shadow-right, 0);
+        top: 0;
+        z-index: -1;
+    }
+}

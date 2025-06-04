@@ -1,0 +1,228 @@
+@use 'sass:map';
+
+/* Padding */
+
+.zamel-p-0 {
+    padding: 0;
+}
+
+/* Padding REM */
+
+.zamel-p-0_5 {
+    padding: 0.5rem;
+}
+
+.zamel-p-1 {
+    padding: 1rem;
+}
+
+.zamel-mobile-p-1 {
+    @media (width < map.get($breakpoints, s)) {
+        padding: 1rem;
+    }
+}
+
+.zamel-p-1_5 {
+    padding: 1.5rem;
+}
+
+.zamel-p-2 {
+    padding: 2rem;
+}
+
+.zamel-p-2_5 {
+    padding: 2.5rem;
+}
+
+.zamel-tablet-up-p-2_5 {
+
+    @media (width >= map.get($breakpoints, s)) {
+        padding: 2.5rem;
+    }
+}
+
+.zamel-p-3 {
+    padding: 3rem;
+}
+
+.zamel-p-4 {
+    padding: 4rem;
+}
+
+.zamel-p-5 {
+    padding: 5rem;
+}
+
+/* Padding EM */
+
+.zamel-p-0_25em {
+    padding: 0.25em;
+}
+
+.zamel-p-0_5em {
+    padding: 0.5em;
+}
+
+.zamel-p-0_75em {
+    padding: 0.75em;
+}
+
+.zamel-p-1em {
+    padding: 1em;
+}
+
+.zamel-p-1_5em {
+    padding: 1.5em;
+}
+
+.zamel-p-2em {
+    padding: 2em;
+}
+
+.zamel-p-5em {
+    padding: 5em;
+}
+
+/* Padding Horizontal */
+
+.zamel-px-0 {
+    padding-inline: 0;
+}
+
+/* Padding Horizontal REM */
+
+.zamel-px-1 {
+    padding-inline: 1rem;
+}
+
+.zamel-mobile-px-1 {
+
+    @media (width < map.get($breakpoints, s)) {
+        padding-inline: 1rem;
+    }
+}
+
+.zamel-px-3 {
+    padding-inline: 3rem;
+}
+
+.zamel-px-8 {
+    padding-inline: 8rem;
+}
+
+/* Padding Horizontal EM */
+
+.zamel-px-1em {
+    padding-inline: 1em;
+}
+
+.zamel-px-1_5em {
+    padding-inline: 1.5em;
+}
+
+.zamel-px-2em {
+    padding-inline: 2em;
+}
+
+.zamel-px-3em {
+    padding-inline: 3em;
+}
+
+/* Padding Vertical REM */
+
+.zamel-py-0_5 {
+    padding-block: 0.5rem;
+}
+
+.zamel-py-1 {
+    padding-block: 1rem;
+}
+
+.zamel-py-2 {
+    padding-block: 2rem;
+}
+
+.zamel-py-3 {
+    padding-block: 3rem;
+}
+
+.zamel-py-4 {
+    padding-block: 4rem;
+}
+
+/* Padding Vertical EM */
+
+.zamel-py-0_5em {
+    padding-block: 0.5em;
+}
+
+.zamel-py-1em {
+    padding-block: 1em;
+}
+
+.zamel-py-1_5em {
+    padding-block: 1.5em;
+}
+
+.zamel-py-2em {
+    padding-block: 2em;
+}
+
+/* Padding Top REM */
+
+.zamel-pt-1 {
+    padding-block-start: 1rem;
+}
+
+.zamel-pt-2 {
+    padding-block-start: 2rem;
+}
+
+.zamel-pt-4 {
+    padding-block-start: 4rem;
+}
+
+/* Padding Top EM */
+
+.zamel-pt-2_5em {
+    padding-block-start: 2.5em;
+}
+
+.zamel-pt-3em {
+    padding-block-start: 3em;
+}
+
+/* Padding Bottom REM */
+
+.zamel-mobile-pb-1 {
+
+    @media (width < map.get($breakpoints, s)) {
+        padding-block-end: 1rem;
+    }
+}
+
+.zamel-pb-2 {
+    padding-block-end: 2rem;
+}
+
+.zamel-pb-3 {
+    padding-block-end: 3rem;
+}
+
+.zamel-pb-4 {
+    padding-block-end: 4rem;
+}
+
+.zamel-pb-6 {
+    padding-block-end: 6rem;
+}
+
+/* Padding Bottom EM */
+
+.zamel-pb-0_25em {
+    padding-block-end: 0.25em;
+}
+
+.zamel-pb-1em {
+    padding-block-end: 1em;
+}

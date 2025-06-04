@@ -1,0 +1,25 @@
+@use 'sass:map';
+
+:root {
+    /* Mobile size adaptation */
+    --zamel-w-fluid-320-1200w-8-16px: clamp(#{map.get($font-sizes, 3xs)}, 0.3182rem + 0.9091vw, #{map.get($font-sizes, base)});
+    --zamel-html-fs: var(--zamel-w-fluid-320-1200w-8-16px);
+
+    /* Typography */
+    --zamel-ff-base: Roboto, system-ui, sans-serif;
+
+    @each $key, $value in $font-sizes {
+        --zamel-fs-#{$key}: #{$value};
+    }
+
+    @each $key, $value in $font-weights {
+        --zamel-fw-#{$key}: #{$value};
+    }
+
+    --zamel-lh-base: 1.3;
+
+    /* Colors */
+    @each $key, $value in $colors {
+        --zamel-c-#{$key}: #{$value};
+    }
+}

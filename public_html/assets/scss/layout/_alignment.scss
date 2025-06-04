@@ -1,0 +1,136 @@
+@use 'sass:map';
+
+/* Alignment Self */
+
+.zamel-self-start {
+    align-self: start;
+    justify-self: start;
+}
+
+.zamel-self-center {
+    align-self: center;
+    justify-self: center;
+}
+
+.zamel-self-end {
+    align-self: end;
+    justify-self: end;
+}
+
+/* Alignment Self Horizontal */
+
+.zamel-self-x-start {
+    justify-self: start;
+}
+
+.zamel-self-x-center {
+    justify-self: center;
+}
+
+.zamel-self-x-end {
+    justify-self: end;
+}
+
+/* Alignment Self Vertical */
+
+.zamel-self-y-start {
+    align-self: start;
+}
+
+.zamel-self-y-center {
+    align-self: center;
+}
+
+.zamel-self-y-end {
+    align-self: end;
+}
+
+.zamel-mobile-self-y-end {
+
+    @media (width < map.get($breakpoints, s)) {
+        align-self: end;
+    }
+}
+
+.zamel-va-center {
+    vertical-align: middle;
+}
+
+
+/* Alignment Items */
+
+.zamel-items-start {
+    align-items: start;
+    justify-content: start;
+}
+
+.zamel-items-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.zamel-items-end {
+    align-items: end;
+    justify-content: end;
+}
+
+/* Alignment Items Horizontal */
+
+.zamel-items-x-start {
+    justify-content: start;
+}
+
+.zamel-items-x-center {
+    justify-content: center;
+}
+
+.zamel-tablet-up-items-x-center {
+
+    @media (width >= map.get($breakpoints, s)) {
+        justify-content: center;
+    }
+}
+
+.zamel-items-x-end {
+    justify-content: end;
+}
+
+.zamel-items-x-between {
+    justify-content: space-between;
+}
+
+.zamel-mobile-items-x-between {
+
+    @media (width < map.get($breakpoints, s)) {
+        justify-content: space-between;
+    }
+}
+
+.zamel-items-x-evenly {
+    justify-content: space-evenly;
+}
+
+/* Alignment Items Vertical */
+
+.zamel-items-y-start {
+    align-items: start;
+}
+
+.zamel-tablet-up-items-y-start {
+
+    @media (width >= map.get($breakpoints, s)) {
+        align-items: start;
+    }
+}
+
+.zamel-items-y-center {
+    align-items: center;
+}
+
+.zamel-items-y-end {
+    align-items: end;
+}
+
+.zamel-items-y-baseline {
+    align-items: baseline;
+}

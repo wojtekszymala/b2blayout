@@ -1,0 +1,10 @@
+@use 'sass:map';
+
+/* Order */
+
+.zamel-mobile-order-1 {
+    
+    @media (width < map.get($breakpoints, s)) {
+        order: 1;
+    }
+}

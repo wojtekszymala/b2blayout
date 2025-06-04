@@ -1,0 +1,18 @@
+@use 'sass:map';
+
+@mixin zamel-modal {
+    inset: 0;
+    position: fixed;
+    z-index: 2;
+}
+
+.zamel-modal {
+    @include zamel-modal;
+}
+
+.zamel-mobile-modal {
+
+    @media (width < map.get($breakpoints, s)) {
+        @include zamel-modal;
+    }
+}

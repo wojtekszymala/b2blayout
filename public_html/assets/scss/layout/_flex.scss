@@ -1,0 +1,97 @@
+@use 'sass:map';
+
+/* Flex */
+
+.zamel-flex {
+    display: flex;
+}
+
+.zamel-flex-inline {
+    display: inline-flex;
+}
+
+.zamel-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.zamel-mobile-flex-wrap {
+
+    @media (width < map.get($breakpoints, s)) {
+        flex-wrap: wrap;
+    }
+}
+
+.zamel-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.zamel-flex-x {
+    flex-direction: row;
+}
+
+.zamel-flex-y {
+    flex-direction: column;
+}
+
+.zamel-mobile-flex-y {
+
+    @media (width < map.get($breakpoints, s)) {
+        flex-direction: column;
+    }
+}
+
+.zamel-mobile-flex-ny {
+
+    @media (width < map.get($breakpoints, s)) {
+        flex-direction: column-reverse;
+    }
+}
+
+.zamel-tablet-down-flex-y {
+
+    @media (width < map.get($breakpoints, m)) {
+        flex-direction: column;
+    }
+}
+
+.zamel-tablet-up-flex-y {
+
+    @media (width >= map.get($breakpoints, s)) {
+        flex-direction: column;
+    }
+}
+
+.zamel-flex-shrink {
+    flex-shrink: 1;
+}
+
+.zamel-flex-no-shrink {
+    flex-shrink: 0;
+}
+
+.zamel-flex-grow {
+    flex-grow: 1;
+}
+
+.zamel-flex-no-grow {
+    flex-grow: 0;
+}
+
+.zamel-flex-basis-0 {
+    flex-basis: 0;
+}
+
+.zamel-flex-basis-half {
+    flex-basis: 50%;
+}
+
+.zamel-flex-basis-full {
+    flex-basis: 100%;
+}
+
+.zamel-mobile-flex-basis-full {
+    
+    @media (width < map.get($breakpoints, s)) {
+        flex-basis: 100%;
+    }
+}

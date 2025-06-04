@@ -1,0 +1,277 @@
+@use 'sass:map';
+
+/* Margin */
+
+.zamel-m-auto {
+    margin: auto;
+}
+
+.zamel-m-0 {
+    margin: 0;
+}
+
+/* Margin EM */
+
+.zamel-m-n0_5 {
+    margin: -0.5em;
+}
+
+/* Margin Horizontal */
+
+.zamel-mx-auto {
+    margin-inline: auto;
+}
+
+.zamel-mobile-mx-0 {
+    @media (width < map.get($breakpoints, s)) {
+        margin-inline: 0;
+    }
+}
+
+/* Margin Horizontal EM */
+
+.zamel-mx-n1em {
+    margin-inline: -1em;
+}
+
+.zamel-mx-1_5em {
+    margin-inline: 1.5em;
+}
+
+/* Margin Vertical */
+
+.zamel-my-0 {
+    margin-block: 0;
+}
+
+/* Margin Vertical REM */
+
+.zamel-my-1 {
+    margin-block: 1rem;
+}
+
+.zamel-my-1_5 {
+    margin-block: 1.5rem;
+}
+
+.zamel-my-4 {
+    margin-block: 4rem;
+}
+
+.zamel-my-5 {
+    margin-block: 5rem;
+}
+
+.zamel-my-6 {
+    margin-block: 6rem;
+}
+
+.zamel-my-7 {
+    margin-block: 7rem;
+}
+
+/* Margin Vertical EM */
+
+.zamel-my-0_25em {
+    margin-block: 0.25em;
+}
+
+.zamel-my-1em {
+    margin-block: 1em;
+}
+
+/* Margin Top */
+
+.zamel-mt-0 {
+    margin-block-start: 0;
+}
+
+/* Margin Top REM */
+
+.zamel-mt-n0_0625 {
+    margin-block-start: -0.0625rem;
+}
+
+.zamel-mt-0_5 {
+    margin-block-start: 0.5rem;
+}
+
+.zamel-mt-1 {
+    margin-block-start: 1rem;
+}
+
+.zamel-mobile-mt-1 {
+
+    @media (width < map.get($breakpoints, s)) {
+        margin-block-start: 1rem;
+    }
+}
+
+.zamel-mt-1_5 {
+    margin-block-start: 1.5rem;
+}
+
+.zamel-mt-2 {
+    margin-block-start: 2rem;
+}
+
+.zamel-mt-3 {
+    margin-block-start: 3rem;
+}
+
+.zamel-mt-4 {
+    margin-block-start: 4rem;
+}
+
+.zamel-tablet-up-mt-4 {
+
+    @media (width >= map.get($breakpoints, s)) {
+        margin-block-start: 4rem;
+    }
+}
+
+.zamel-mt-5 {
+    margin-block-start: 5rem;
+}
+
+.zamel-mt-6 {
+    margin-block-start: 6rem;
+}
+
+.zamel-mt-7 {
+    margin-block-start: 7rem;
+}
+
+/* Margin Top EM */
+
+.zamel-mt-n0_25em {
+    margin-block-start: -0.25em;
+}
+
+.zamel-mt-n0_125em {
+    margin-block-start: -0.125em;
+}
+
+.zamel-mt-n0_0625em {
+    margin-block-start: -0.0625em;
+}
+
+.zamel-mt-0_0625em {
+    margin-block-start: 0.0625em;
+}
+
+.zamel-mt-0_125em {
+    margin-block-start: 0.125em;
+}
+
+.zamel-mt-0_25em {
+    margin-block-start: 0.25em;
+}
+
+.zamel-mt-0_5em {
+    margin-block-start: 0.5em;
+}
+
+.zamel-mt-1em {
+    margin-block-start: 1em;
+}
+
+.zamel-mt-1_5em {
+    margin-block-start: 1.5em;
+}
+
+.zamel-mt-2em {
+    margin-block-start: 2em;
+}
+
+.zamel-mt-2_5em {
+    margin-block-start: 2.5em;
+}
+
+.zamel-mt-3em {
+    margin-block-start: 3em;
+}
+
+.zamel-mt-5em {
+    margin-block-start: 5em;
+}
+
+
+/* Margin Bottom REM */
+
+.zamel-mb-1_5 {
+    margin-block-end: 1.5rem;
+}
+
+.zamel-mb-2 {
+    margin-block-end: 2rem;
+}
+
+.zamel-mb-3 {
+    margin-block-end: 3rem;
+}
+
+.zamel-mb-4 {
+    margin-block-end: 4cap;
+}
+
+.zamel-mb-6 {
+    margin-block-end: 6rem;
+}
+
+.zamel-mb-7 {
+    margin-block-end: 7rem;
+}
+
+/* Margin Bottom EM */
+
+.zamel-mb-0_125em {
+    margin-block-end: 0.125em;
+}
+
+.zamel-mb-0_25em {
+    margin-block-end: 0.25em;
+}
+
+.zamel-mb-0_5em {
+    margin-block-end: 0.5em;
+}
+
+.zamel-mb-0_75em {
+    margin-block-end: 0.75em;
+}
+
+.zamel-mb-1em {
+    margin-block-end: 1em;
+}
+
+.zamel-mb-1_5em {
+    margin-block-end: 1.5em;
+}
+
+.zamel-mb-2em {
+    margin-block-end: 2em;
+}
+
+
+/* Margin Left */
+
+.zamel-ml-auto {
+    margin-inline-start: auto;
+}
+
+/* Margin Left EM */
+
+.zamel-ml-0_25em {
+    margin-inline-start: 0.25em;
+}
+
+.zamel-ml-1em {
+    margin-inline-start: 1em;
+}
+
+/* Margin Right */
+
+.zamel-mr-auto {
+    margin-inline-end: auto;
+}

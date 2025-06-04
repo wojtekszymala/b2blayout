@@ -1,0 +1,162 @@
+@use 'sass:map';
+
+.zamel-product-item {
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+    display: flex;
+    gap: 1em 3em;
+    justify-content: space-between;
+    padding: 1.5em;
+
+    @media (width < #{map.get($breakpoints, s)}) {
+        flex-direction: column;
+    }
+
+    @container (width < #{map.get($breakpoints, s)}) {
+        flex-direction: column;
+    }
+}
+
+.zamel-product-item-top {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    margin-block-end: 1em;
+}
+
+.zamel-product-item-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (width >= #{map.get($breakpoints, s)}) {
+        flex-shrink: 0;
+    }
+
+    @container (width >= #{map.get($breakpoints, s)}) {
+        flex-shrink: 0;
+    }
+}
+
+.zamel-product-item-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block-end: auto;
+}
+
+.zamel-product-item-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: end;
+
+    @media (width >= 64em) {
+        flex-shrink: 0;
+    }
+
+    @container (width >= #{map.get($breakpoints, s)}) {
+        flex-shrink: 0;
+    }
+}
+
+.zamel-product-item-badge {
+    color: var(--zamel-c-primary);
+    font-size: var(--zamel-fs-s);
+    font-weight: var(--zamel-fw-bold);
+}
+
+.zamel-product-item-img {
+    margin-inline: auto;
+}
+
+.zamel-product-item-title {
+    font-size: var(--zamel-fs-m);
+    font-weight: var(--zamel-fw-bold);
+    margin-block: 0 1em;
+}
+
+.zamel-product-item-details {
+    border: solid var(--zamel-c-grey-0_4);
+    border-width: max(0.0625em, 1px) 0;
+    font-size: var(--zamel-fs-s);
+    margin-block: 0;
+    padding-block: 1em;
+}
+
+.zamel-product-item-detail-key {
+    display: inline;
+}
+
+.zamel-product-item-detail-value {
+    display: inline;
+    font-weight: var(--zamel-fw-bold);
+    margin-inline-start: 0;
+}
+
+.zamel-product-item-price-bar {
+    align-items: baseline;
+    display: flex;
+    gap: 0.5em;
+    justify-content: end;
+}
+
+.zamel-product-item-price-old {
+    font-size: var(--zamel-fs-s);
+    font-weight: var(--zamel-fw-base);
+    text-decoration: line-through;
+}
+
+.zamel-product-item-price {
+    font-size: var(--zamel-fs-xl);
+    font-weight: var(--zamel-fw-bold);
+}
+
+.zamel-product-item-price-net-gross {
+    font-size: var(--zamel-fs-s);
+}
+
+.zamel-product-item-info-bar {
+    align-items: center;
+    display: flex;
+    font-size: var(--zamel-fs-s);
+
+    & > * {
+        flex-grow: 1;
+
+        & + * {
+            border-inline-start: 0;
+        }
+    }
+}
+
+.zamel-product-item-stock {
+    align-items: center;
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+    display: flex;
+    gap: 0.75em;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+.zamel-product-item-compare {
+    align-items: center;
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+    border-inline-start-width: 0;
+    display: flex;
+    gap: 0.75em;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+.zamel-product-item-action-bar {
+    align-items: center;
+    display: flex;
+    font-size: var(--zamel-fs-s);
+    gap: 0.5em;
+    justify-content: center;
+
+    & > * {
+        flex-grow: 1;
+    }
+}

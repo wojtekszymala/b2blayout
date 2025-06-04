@@ -1,0 +1,88 @@
+@use './../functions/unit-converter' as uc;
+
+/* Border */
+
+.zamel-b-0 {
+    border: 0;
+}
+
+.zamel-b {
+    border: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-bw-0_125 {
+    border-width: 0.125rem;
+}
+
+.zamel-bw-0_3125em {
+    border-width: 0.3125em;
+}
+
+/* Border Top */
+
+.zamel-bt-0 {
+    border-block-start: 0;
+}
+
+.zamel-bt {
+    border-block-start: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-btw--0_125em {
+    border-block-start-width: 0.125em;
+}
+
+.zamel-items-bt {
+
+    & > :not(:first-child) {
+        border-block-start: max(0.0625em, 1px) solid currentColor;
+    }
+}
+
+/* Border Bottom */
+
+.zamel-bb {
+    border-block-end: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-bb--only {
+    border-width: 0 0 max(0.0625em, 1px);
+}
+
+.zamel-bbw--0_1875 {
+    border-block-end-width: 0.1875rem;
+}
+
+/* Border Left */
+
+.zamel-bl {
+    border-inline-start: max(0.0625em, 1px) solid var(--zamel-c-black);
+}
+
+.zamel-blw--0_125rem {
+    border-inline-start-width: max(0.125rem, 1px);
+}
+
+.zamel-blc--primary {
+    border-inline-start-color: var(--zamel-c-primary);
+}
+
+/* Border Colors */
+
+.zamel-bc--primary {
+    border-color: var(--zamel-c-primary);
+}
+
+.zamel-bc--silver {
+    border-color: var(--zamel-c-silver);
+}
+
+.zamel-bc--light-grey {
+    border-color: var(--zamel-c-light-grey);
+}
+
+/* Border Shapes */
+
+.zamel-circle {
+    border-radius: 999999%;
+}

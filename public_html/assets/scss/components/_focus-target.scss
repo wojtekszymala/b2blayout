@@ -1,0 +1,6 @@
+.zamel-focus-target {
+
+    .zamel-focus-source:not(:focus-within) & {
+        display: none;
+    }
+}
